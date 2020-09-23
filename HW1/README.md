@@ -37,7 +37,9 @@ Bin2Base64(char *bin_str, int str_len, char *base64)
 
 所以先將 input 的 hex digits 轉成 binary，再 6 個為一組做轉換，而若轉換後的 binary 無法被 3 整除，先在末尾補足 0bit，使其能夠被 3 整除，再進行 Base64 編碼，編碼完後會剩下之前補足的 0bit，取 6 個一組轉換成 "="。
 
-![]()
+[Flow chart](https://github.com/Wder4/DS/blob/master/HW1/flowchart.jpg)
+
+![](https://github.com/Wder4/DS/blob/master/HW1/flowchart.jpg?raw=true)
 
 ## Parameter
 ```
