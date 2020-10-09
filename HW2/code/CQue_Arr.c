@@ -15,7 +15,7 @@ int isQEmpty(queue *q) {
 }
 
 int isQFull(queue *q) {
-	if(q->rear == MAXQUE - 1)
+	if(q->front == (q->rear + 1) % MAXQUE)
 		return 1;
 	return 0;
 }
