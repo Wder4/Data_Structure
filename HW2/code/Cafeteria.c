@@ -39,13 +39,12 @@ int main(int argc, char **argv) {
     
     int i = 0;
     while (!feof(fp)) {
-        fgets(str[i], 200, fp);
-        if (str[i][strlen(str[i]) - 1] == '\n')
-            str[i][strlen(str[i]) - 1] = '\0';
+        if (fgets(str[i], 200, fp) == NULL)
+            break;
         if (strstr(str[i], "^Z"))
            break;
-
-
+        if (str[i][strlen(str[i]) - 1] == '\n')
+            str[i][strlen(str[i]) - 1] = '\0';
         // puts(str[i]);
         stupr(str[i], strlen(str[i]));
         int loc = stloc(str[i], " ") + 1;
@@ -65,7 +64,6 @@ int main(int argc, char **argv) {
             printf("customer: %c, plate: %d\n", customer, plate);
             char *tmp = malloc(sizeof(char)*3);
             sprintf(tmp, "%d", plate);
-            // out[2] = '\n';
             int slen = strlen(tmp);
             printf("%d\n", slen);
             char *out = malloc(sizeof(char) * (slen + 1));
