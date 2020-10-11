@@ -45,6 +45,7 @@ int main(int argc, char **argv) {
         if (strstr(str[i], "^Z"))
            break;
 
+
         // puts(str[i]);
         stupr(str[i], strlen(str[i]));
         int loc = stloc(str[i], " ") + 1;
@@ -62,10 +63,17 @@ int main(int argc, char **argv) {
             int customer =  qLib.deque(qptr);
             int plate =  qLib.deque(plqptr);
             printf("customer: %c, plate: %d\n", customer, plate);
-            char out[5] = {};
-            sprintf(out, "%d", plate);
-            out[4] = '\n';
-            fwrite(out, sizeof(char), 5, ofp);
+            char *tmp = malloc(sizeof(char)*3);
+            sprintf(tmp, "%d", plate);
+            // out[2] = '\n';
+            int slen = strlen(tmp);
+            printf("%d\n", slen);
+            char *out = malloc(sizeof(char) * (slen + 1));
+            strcpy(out, tmp);
+            out[slen] = '\n';
+            fwrite(out, sizeof(char), slen + 1, ofp);
+            free(tmp);
+            free(out);
         }         
         ++i;
     }
