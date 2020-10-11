@@ -19,6 +19,11 @@ void stlwr(char *str, size_t n) {
     }
 }
 
+void substr(char *targ, const char* src, unsigned int start, unsigned int cnt) {
+    strncpy(targ, src + start, cnt);
+    targ[cnt] = 0;
+}
+
 int stloc(char *str, char *str_find) {
     int loc = strstr(str, str_find) - str;
     return loc;
