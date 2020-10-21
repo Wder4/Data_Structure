@@ -5,9 +5,9 @@ p1.out: p1.o sstring.o Stack_LL.o Que_LL.o
 p1.o: p1.c sstring.h Stack_LL.h Que_LL.h
 	$(c11) -c p1.c
 
-p2.out: p2.o sstring.o Stack_LL.o Que_LL.o
-	$(c11) -o p2 p2.o sstring.o Stack_LL.o Que_LL.o
-p2.o: p2.c sstring.h Stack_LL.h Que_LL.h
+p2.out: p2.o sstring.o Que_LL.o
+	$(c11) -o p2 p2.o sstring.o Que_LL.o
+p2.o: p2.c sstring.h Que_LL.h
 	$(c11) -c p2.c
 
 sstring.o: sstring.c sstring.h
