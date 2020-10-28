@@ -34,18 +34,19 @@ int card2num(char *s) {
 }
 
 int main(int argc, char **argv) {
-    char str[10] = {};
+    char *iput;
     char *val;
     que_t *q = q_new();
 
-    while (fscanf(stdin, "%s", &str) != EOF) {  
-        q_enq(q, str);
+    while (fscanf(stdin, "%s", &iput) != EOF) {  
+        q_enq(q, iput);
+        free(iput);
     }  
+    
 
     int i = 13;
     int dec;
-    q_ele_t *tmp;
-    tmp = q->head;
+
     while (i > 1){
         showCards(q);
         puts("");
