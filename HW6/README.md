@@ -45,7 +45,7 @@ void avl_ins(avl_t *avl, char *s, char *key);  // insert the key
 ```
 
 ## Build and Run
-To bulild the p1.exe, run `make` inside the directory where you have the source.
+To build the p1.exe, run `make` inside the directory where you have the source.
 ```
 $ make p1
 ```
