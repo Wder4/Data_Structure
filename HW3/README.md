@@ -101,7 +101,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ![](https://i.imgur.com/5muIojD.png)
 
 ## Build and Run
-To bulild the p2.exe, run `make` inside the directory where you have the source.
+To build the p2.exe, run `make` inside the directory where you have the source.
 ```
 $ make p2.out
 ```
