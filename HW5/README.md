@@ -41,7 +41,7 @@ h_hash(hash_t *h, int key);   // add key into the hash table
 ```
 
 ## Build and Run
-Bulild the p1.exe, run `make` inside the directory where you have the source.
+Build the p1.exe, run `make` inside the directory where you have the source.
 ```cpp
 $ make 
 ```
