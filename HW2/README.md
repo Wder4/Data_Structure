@@ -50,7 +50,7 @@ void deque(queue*)       //delete from a queue, and return value
 void show(queue*)        //print the value in the queue
 ```
 ## Build and Run
-To bulild the Cafeteria.exe, run `make` inside the directory where you have the source.
+To build the Cafeteria.exe, run `make` inside the directory where you have the source.
 ```
 $ make
 ```
