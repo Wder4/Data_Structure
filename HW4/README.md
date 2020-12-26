@@ -44,7 +44,7 @@ bool tree_del(tree_t *t, int key);                        // delete the key
 ```
 
 ## Build and Run
-To bulild the p1.exe, run `make` inside the directory where you have the source.
+To build the p1.exe, run `make` inside the directory where you have the source.
 ```
 $ make 
 ```
